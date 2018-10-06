@@ -18,7 +18,14 @@
 	table.tblone tr:nth-child(2n+1){background:#fff;height:30px;}
 	table.tblone tr:nth-child(2n){background:#f1f1f1;height:30px;}
 	#myform{width:400px;border:1px solid #fff;padding:10px;}
+	input[type="text"],[type="email"] {border:1px solid #ddd;margin-bottom:5px;padding:5px;width:228px;font-size:16px}
+	input[type="submit"],[type="reset"]{cursor: pointer}
+	input[type=text],[type="email"] {border-radius: 5px;padding: 5px 5px;width: 225px; font-size: 15px;}
+		input[type=submit],input[type=reset] {font-size: 16px;padding: 3px 15px;border: 2px solid;border-radius: 8px; margin-top: 20px;}
+		button{font-size: 16px;padding: 3px 15px;border: 2px solid;border-radius: 8px; margin-top: 20px;cursor: pointer}
+		button a{ text-decoration: none; color: #000; }
 	</style>
+
 </head>
 <body>
 

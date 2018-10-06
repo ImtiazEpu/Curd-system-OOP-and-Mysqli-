@@ -7,10 +7,13 @@
 <?php 
 
 $db    = new Database();
-$query = "SELECT * FROM user";
-$read  = $db->select($query);
+$selectquery = "SELECT * FROM user";
+$read  = $db->select($selectquery);
 ?>
-		
+	<?php if (isset($_GET['msg'])) {
+			echo "<span style = 'color:green;'>".$_GET['msg']."</span>";
+	} ?>	
+	
 	<table class="tblone">
 		<tr>
 			<th width="25%">Name</th>
@@ -32,7 +35,7 @@ $read  = $db->select($query);
 		<p>Data Not available</p>
 	<?php } ?>
 	</table>	
-		
+	<a href="create.php"><button>Create</button></a>	
 
 
 

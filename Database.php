@@ -23,15 +23,33 @@
 	    	}
 	    }
 
-	    public function select($query){
-	    	$result = $this->link->query($query) or die($this->link->error.__LINE__);
+	    //Select & Read Database
+	    //======================
+
+	    public function select($selectquery){
+	    	$result = $this->link->query($selectquery) or die($this->link->error.__LINE__);
 	    	if ($result->num_rows > 0) {
 	    		return $result;
-
-	    	}else{
+			}else{
 		    		return false;
 		    	}
 	    }
+
+
+	    //Insert data in Database
+	    //======================
+
+	    public function insert($insertquery){
+	    	$result = $this->link->query($insertquery) or die($this->link->error.__LINE__);
+	    	if ($result) {
+	    		echo "<script type='text/javascript'>window.top.location='index.php?msg=Data Insert Successfully.';</script>";
+	    		exit();
+			}else{
+		    		die("Error:(".$this->link->errno.")".$this->link->error);
+		    	}
+	    }
+
+
 
 
 	}
