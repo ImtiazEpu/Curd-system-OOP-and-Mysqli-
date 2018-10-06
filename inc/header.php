@@ -21,9 +21,18 @@
 	input[type="text"],[type="email"] {border:1px solid #ddd;margin-bottom:5px;padding:5px;width:228px;font-size:16px}
 	input[type="submit"],[type="reset"]{cursor: pointer}
 	input[type=text],[type="email"] {border-radius: 5px;padding: 5px 5px;width: 225px; font-size: 15px;}
-		input[type=submit],input[type=reset] {font-size: 16px;padding: 3px 15px;border: 2px solid;border-radius: 8px; margin-top: 20px;}
-		button{font-size: 16px;padding: 3px 15px;border: 2px solid;border-radius: 8px; margin-top: 20px;cursor: pointer}
-		button a{ text-decoration: none; color: #000; }
+		input[type=submit],input[type=reset] {font-size: 16px;padding: 3px 15px;border: 2px solid #008CBA;border-radius: 8px; margin-top: 20px; -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;}
+		.button{font-size: 16px;padding: 3px 15px;border: 2px solid #008CBA;border-radius: 8px; margin-top: 20px;cursor: pointer}
+		.button{ text-decoration: none; color: #000; -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;}
+		.button:hover{background-color: #008CBA;
+    color: white; border: 2px solid #008CBA}
+
+    input[type=submit]:hover{background-color: #008CBA;
+    color: white; border: 2px solid #008CBA}
+    input[type=reset]:hover{background-color: #008CBA;
+    color: white; border: 2px solid #008CBA}
 	</style>
 
 </head>

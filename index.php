@@ -28,14 +28,14 @@ $read  = $db->select($selectquery);
 			<td><?php echo $row['name']; ?></td>
 			<td><?php echo $row['email']; ?></td>
 			<td><?php echo $row['skill']; ?></td>
-			<td><a href="Update.php?id=<?php echo $row['id']; ?>">Edit</a></td>
+			<td><a class="button" href="update.php?id=<?php echo urldecode($row['id']); ?>">Edit</a></td>
 		</tr>
 	<?php } ?>
 	<?php }else {?>
 		<p>Data Not available</p>
 	<?php } ?>
 	</table>	
-	<a href="create.php"><button>Create</button></a>	
+	<a class="button" href="create.php">Create</a>	
 
 
 

@@ -50,6 +50,21 @@
 	    }
 
 
+	    //Update data in Database
+	    //======================
+
+	    public function update($updatequery){
+	    	$result = $this->link->query($updatequery) or die($this->link->error.__LINE__);
+	    	if ($result) {
+	    		echo "<script type='text/javascript'>window.top.location='index.php?msg=Data Updated Successfully.';</script>";
+	    		exit();
+			}else{
+		    		die("Error:(".$this->link->errno.")".$this->link->error);
+		    	}
+	    }
+
+
+
 
 
 	}
