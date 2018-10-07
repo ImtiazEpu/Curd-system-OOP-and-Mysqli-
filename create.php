@@ -6,20 +6,20 @@
 
 <?php 
 
-$db    = new Database();
-if (isset($_POST['submit'])) {
-	$name  = mysqli_real_escape_string($db->link, $_POST['name']);
-	$email = mysqli_real_escape_string($db->link, $_POST['email']);
-	$skill = mysqli_real_escape_string($db->link, $_POST['skill']);
-	if ($name =='' || $email == '' || $skill == '') {
-		$error = "Field must not be Empty !!";
-	}else {
-		$insertquery = "INSERT INTO user(name,email,skill) VALUES ('$name','$email','$skill')";
-		$create = $db->insert($insertquery);
-	}
+	$db    = new Database();
+	if (isset($_POST['submit'])) {
+		$name  = mysqli_real_escape_string($db->link, $_POST['name']);
+		$email = mysqli_real_escape_string($db->link, $_POST['email']);
+		$skill = mysqli_real_escape_string($db->link, $_POST['skill']);
+		if ($name =='' || $email == '' || $skill == '') {
+			$error = "Field must not be Empty !!";
+		}else {
+			$insertquery = "INSERT INTO user(name,email,skill) VALUES ('$name','$email','$skill')";
+			$create = $db->insert($insertquery);
+		}
 
 	
-}
+	}
 
 ?>
 
@@ -46,9 +46,9 @@ if (isset($_POST['submit'])) {
 			<tr>
 				<td></td>
 				<td>
-					<input type="submit" name="submit"  value="Submit">
+					<input class="update" type="submit" name="submit"  value="Submit">
 					<input type="reset" value="Clear">
-					<a class="button" href="index.php">Go Back</a>
+					<a class="gbutton" href="index.php">Go Back</a>
 				</td>
 			</tr>
 			
